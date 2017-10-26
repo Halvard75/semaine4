@@ -1,0 +1,23 @@
+
+<h1 style="text-align: center; color: blue; font-size: 40px;">Listing articles</h1>
+
+<table style="margin: auto; font-size: 20px;">
+  <tr>
+    <th style="text-decoration: underline;">Title</th>
+    <th style="text-decoration: underline;">Text</th>
+  </tr>
+
+  <% @articles.each do |article| %>
+    <tr>
+      <td style="border:1px solid black; padding-left: 55px; padding-right: 55px"><%= article.title %></td>
+      <td style="border:1px solid black; text-align: center; padding-left: 55px; padding-right: 55px"><%= article.text %></td>
+      <td style="border:1px solid black;"><%= link_to 'Show', article_path(article) %></td>
+      <td style="border:1px solid black;"><%= link_to 'Edit', edit_article_path(article) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<h3 style="text-align: center;"><%= link_to("Créer nouvel article", new_article_path) %><h3>
+
+
+<h2 style="text-align: center;"><%= link_to("Retour homepage", controller: 'welcome') %><h2>

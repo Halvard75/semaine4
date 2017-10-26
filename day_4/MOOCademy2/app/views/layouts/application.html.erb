@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MOOCademy2</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+      
+    <div style="padding-top: 15px; text-align: center; float left">
+    <ul style="list-style: none;">
+      <li style="margin-left: 30%; float: left; width: 100px; background-color: #54BCF4"><%= link_to "Home", '/' %></li>
+      <li style="margin-left: 20%; float: left; width: 100px; background-color: #F787EF"><%= link_to "Cours", 'cours' %></li>
+    </ul>
+    </div>
+    <%= yield %>
+
+  </body>
+</html>
